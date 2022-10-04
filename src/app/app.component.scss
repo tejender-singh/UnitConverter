@@ -1,17 +1,17 @@
 .app-content {
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 .background {
-    background-repeat: round !important;
-    opacity: 0.6;
-    z-index: 0;
+  background-repeat: round !important;
+  opacity: 0.4;
+  z-index: 0;
 }
 
 .foreground {
-    z-index: 1;
+  z-index: 1;
 }

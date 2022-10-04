@@ -1,1 +1,108 @@
-<p>app-temperature-converter works!</p>
+<div class="converter">
+  <div class="columns">
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title is-4">From</p>
+          <div class="content">
+            <div
+              class="dropdown"
+              [ngClass]="fromDropdownExpanded ? 'is-active' : ''"
+            >
+              <div class="dropdown-trigger">
+                <button
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu3"
+                  (click)="toggleFromDropdown()"
+                >
+                  <span>{{ from }}</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                  <div *ngFor="let unit of units">
+                    <a
+                      (click)="fromSelected(unit)"
+                      *ngIf="unit === currentUnit"
+                      class="dropdown-item is-active"
+                    >
+                      {{ unit }}
+                    </a>
+                    <a
+                      (click)="fromSelected(unit)"
+                      *ngIf="unit !== currentUnit"
+                      class="dropdown-item"
+                    >
+                      {{ unit }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <input class="input" type="number" placeholder="" [(ngModel)]="inputValue" #ctrl="ngModel" (ngModelChange)="onFromChanged()" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title is-4">To</p>
+          <div class="content">
+            <div
+              class="dropdown"
+              [ngClass]="toDropdownExpanded ? 'is-active' : ''"
+            >
+              <div class="dropdown-trigger">
+                <button
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu3"
+                  (click)="toggleToDropdown()"
+                >
+                  <span>{{ to }}</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                  <div *ngFor="let unit of units">
+                    <a
+                      (click)="toSelected(unit)"
+                      *ngIf="unit === currentUnit"
+                      class="dropdown-item is-active"
+                    >
+                      {{ unit }}
+                    </a>
+                    <a
+                      (click)="toSelected(unit)"
+                      *ngIf="unit !== currentUnit"
+                      class="dropdown-item"
+                    >
+                      {{ unit }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <input class="input" type="number" [disabled]="true" placeholder="" [(ngModel)]="outputValue"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column"></div>
+    <div class="column"></div>
+  </div>
+</div>

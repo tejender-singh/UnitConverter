@@ -1,8 +1,8 @@
-<div class="app-content background" [ngStyle]="{'background-image': backgroundImage}"></div>
+<div class="app-content background" [ngStyle]="{'background-image': backgroundImage}" [@fade]="fadeStatus" ></div>
 <div class="app-content foreground" >
-  <div class="dropdown is-hoverable">
+  <div class="dropdown" [ngClass]="dropdownExpanded ? 'is-active' : ''">
     <div class="dropdown-trigger">
-      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4" (click)="toggleDropdown()">
         <span>{{currentUnit}}</span>
         <span class="icon is-small">
           <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -10,8 +10,11 @@
       </button>
     </div>
     <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-      <div *ngFor="let unit of units" class="dropdown-content">
-        <a (click)="unitChanged(unit)" class="dropdown-item"> {{unit}} </a>
+      <div class="dropdown-content">
+        <div *ngFor="let unit of units">
+          <a (click)="unitChanged(unit)" *ngIf="unit === currentUnit" class="dropdown-item is-active"> {{unit}} </a>
+          <a (click)="unitChanged(unit)" *ngIf="unit !== currentUnit" class="dropdown-item"> {{unit}} </a>
+        </div>
       </div>
     </div>
   </div>

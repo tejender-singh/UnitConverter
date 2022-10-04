@@ -11,7 +11,7 @@ import { AppTimeConverterComponent } from './app-time-converter/app-time-convert
 import { AppDateConverterComponent } from './app-date-converter/app-date-converter.component';
 import { AppWeightConverterComponent } from './app-weight-converter/app-weight-converter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [
