@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-app-temperature-converter',
+  selector: 'app-temperature-converter',
   templateUrl: './app-temperature-converter.component.html',
   styleUrls: ['./app-temperature-converter.component.scss']
 })

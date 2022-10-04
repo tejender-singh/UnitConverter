@@ -1,0 +1,17 @@
+.app-content {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.background {
+    background-repeat: round !important;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.foreground {
+    z-index: 1;
+}

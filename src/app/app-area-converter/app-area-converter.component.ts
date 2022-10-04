@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-app-area-converter',
+  selector: 'app-area-converter',
   templateUrl: './app-area-converter.component.html',
   styleUrls: ['./app-area-converter.component.scss']
 })

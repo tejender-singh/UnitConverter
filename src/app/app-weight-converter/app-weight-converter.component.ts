@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-app-weight-converter',
+  selector: 'app-weight-converter',
   templateUrl: './app-weight-converter.component.html',
   styleUrls: ['./app-weight-converter.component.scss']
 })

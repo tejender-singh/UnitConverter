@@ -10,6 +10,7 @@ import { AppVolumeConverterComponent } from './app-volume-converter/app-volume-c
 import { AppTimeConverterComponent } from './app-time-converter/app-time-converter.component';
 import { AppDateConverterComponent } from './app-date-converter/app-date-converter.component';
 import { AppWeightConverterComponent } from './app-weight-converter/app-weight-converter.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,20 @@ import { AppWeightConverterComponent } from './app-weight-converter/app-weight-c
     AppWeightConverterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    AppUnitSelectorComponent,
+    AppTemperatureConverterComponent,
+    AppLengthConverterComponent,
+    AppAreaConverterComponent,
+    AppVolumeConverterComponent,
+    AppTimeConverterComponent,
+    AppDateConverterComponent,
+    AppWeightConverterComponent
+  ]
 })
 export class AppModule { }

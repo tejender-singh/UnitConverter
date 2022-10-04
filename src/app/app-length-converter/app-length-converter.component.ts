@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-app-length-converter',
+  selector: 'app-length-converter',
   templateUrl: './app-length-converter.component.html',
   styleUrls: ['./app-length-converter.component.scss']
 })
